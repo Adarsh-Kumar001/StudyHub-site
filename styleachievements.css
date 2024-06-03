@@ -1,0 +1,289 @@
+/*Imported font from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Namdhinggo", serif;       /*from google fonts*/
+}
+
+
+/*styling Header*/
+
+a{
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: white;
+    
+}
+
+header{
+    max-width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1.5rem;
+    
+}
+
+.logo-icon{
+    height: 2.8rem;
+    width: 2.8rem;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    gap:0.5rem;
+}
+
+.nav-links{
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.1rem;
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+}
+
+.nav-link{
+    color: rgb(66, 66, 66);
+}
+
+.nav-link:hover{
+    color: rgb(59, 59, 222);
+}
+
+.nav-button{
+    height: 2.2rem;
+    width: 6.2rem;
+    background-color: rgb(58, 58, 255);
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-color: rgb(112, 103, 103);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button:hover{
+    background-color: rgb(77, 77, 188);
+    cursor: pointer;
+}
+
+/*Media query to hide nav items and button under 768px*/
+
+@media screen and (max-width:768px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-links{
+        display: none;
+    }
+
+}
+
+.menu-button img{
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+.menu-button{
+    display: none;
+    border: 0px;
+    background-color: white;
+}
+
+@media screen and (max-width:768px) {
+
+    header{
+       width: 85vw;
+       padding: 0.5rem;
+       padding-left: 0;
+       padding-right: 0;
+    }
+    .menu-button{
+        display:block;
+    }
+}
+
+
+/*Styling Main box below header*/
+
+.mainbox{
+    max-width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.leftbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    animation: SlideFromLeft 1s ease forwards;
+}
+
+@keyframes SlideFromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.intro-text{
+    text-align: left;
+    color: rgb(58, 58, 255);
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.heading{
+    text-align: left;
+    color: rgb(66, 66, 66);
+    font-size: 3rem;
+}
+
+.desc-text{
+    text-align: left;
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+    font-weight: 100;
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+
+
+.rightbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgcontainor{
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0,0.1);
+    height: 70vh;
+    width: 75vh;
+    border-radius: 1rem;
+}
+
+.rightbox img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .mainbox{
+        flex-direction: column;
+    }
+    
+    .intro-text{
+        font-size: 1.2rem;
+    }
+
+    .heading{
+        font-size: 2rem;
+    }
+
+    .desc-text{
+        padding-top: 1rem;
+        padding-right: 0;
+    }
+
+    .buttonbox{
+        justify-content: center;
+        gap:1rem;
+    }
+
+    .imgcontainor{
+       margin-top: 2rem;
+       height: 40vh;
+       width: 44vh;
+    }
+}
+
+
+/*Styling MAin Content*/
+
+.containor{
+    width: 100%;
+    background-color: rgb(217, 217, 217);
+    padding-top: 3rem;
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+    margin-bottom: 2rem;
+
+} 
+
+.containor h2{
+    font-size: 2rem;
+    color: rgb(0, 0, 211);
+    padding-bottom: 2rem;
+}
+
+.containor ul{
+    font-size: 1.5rem;
+    color: rgb(185, 0, 0);
+    padding-bottom: 1rem;
+    font-weight: 600;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+    
+}
+
+.containor li{
+    font-size: 1rem;
+    color: rgb(58, 58, 58);
+    font-weight: 400;
+    text-align: left;
+    margin: auto;
+    padding-left: 2rem;
+}
+
+.containor p{
+    font-size: 1.5rem;
+    color: rgb(56, 56, 255);
+    font-weight: bold;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+
+
+.containorbox{
+    width: 35vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:768px) {
+
+    .containorbox{
+        width: 90vw;
+    }
+    
+}
